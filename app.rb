@@ -57,7 +57,7 @@ class Homepage < Sinatra::Base
 
   post '/contact/new' do
     send_email(params[:name], params[:email], params[:message])
-    @contact = params[:name].split(' ')[0]
+    @contact = params[:name]
     redirect '/'
   end
 

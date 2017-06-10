@@ -46,7 +46,7 @@
 
 </body>
 
-<% if @contact %>
+<% unless @contact.nil? %>
 
 <div class="lightbox" id="confirmation_lightbox">
   <div id="confirmation_message">
