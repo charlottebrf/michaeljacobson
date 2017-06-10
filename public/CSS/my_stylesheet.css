@@ -325,14 +325,17 @@ div.blog {
 }
 
 input, textarea {
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .portfolio_blurb {
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 200;
 }
 
 .portfolio_title {
     font-size: 30px;
     font-weight: 300;
+    padding: 0;
+    margin-bottom: 20px;
 }
