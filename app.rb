@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require 'thin'
+# require 'thin'
 
 class Homepage < Sinatra::Base
 
