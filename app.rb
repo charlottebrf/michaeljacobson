@@ -41,6 +41,7 @@ class Homepage < Sinatra::Base
 
   post '/contact/new' do
     send_email(params[:name], params[:email], params[:message])
+    redirect '/'
   end
 
   run! if $PROGRAM_NAME == __FILE__
