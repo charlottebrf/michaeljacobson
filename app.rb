@@ -59,7 +59,7 @@ class Homepage < Sinatra::Base
     erb :portfolio
   end
 
-  post '/contact/new' do
+  post '/contact/create' do
     send_email(params[:name], params[:email], params[:message])
     session[:contact] = params[:name].split(' ')[0]
     redirect '/'
