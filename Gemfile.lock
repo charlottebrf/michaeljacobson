@@ -14,6 +14,10 @@ GEM
     rack (2.0.3)
     rack-protection (2.0.0)
       rack
+    ruby_http_client (3.1.0)
+    sendgrid-ruby (5.0.0)
+      ruby_http_client (~> 3.0)
+      sinatra (>= 1.4.7, < 3)
     sinatra (2.0.0)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -30,8 +34,9 @@ PLATFORMS
 
 DEPENDENCIES
   pony
+  sendgrid-ruby
   sinatra
   thin
 
 BUNDLED WITH
-   1.15.1
+   1.15.0
