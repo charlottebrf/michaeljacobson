@@ -31,6 +31,10 @@ class Homepage < Sinatra::Base
     end
   end
 
+  before do
+    @contact = session[:contact]
+  end
+
   get '/' do
     erb :index
   end
@@ -57,12 +61,12 @@ class Homepage < Sinatra::Base
 
   post '/contact/new' do
     send_email(params[:name], params[:email], params[:message])
-    @contact = params[:name]
+    session[:contact] = params[:name]
     redirect '/'
   end
 
   post '/contact/delete' do
-    @contact = nil
+    session[:contact] = nil
   end
 
   run! if $PROGRAM_NAME == __FILE__
