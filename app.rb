@@ -1,7 +1,7 @@
 require 'sinatra/base'
 require 'thin'
 require 'pony'
-require 'sendgrid'
+require 'sendgrid-ruby'
 
 class Homepage < Sinatra::Base
   include SendGrid
