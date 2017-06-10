@@ -24,7 +24,7 @@ class Homepage < Sinatra::Base
 
   helpers do
     def send_email(name, email, message)
-      Pony.mail to: 'michael.jacobson89@gmail.com',
+      Pony.mail to: ENV['MY_EMAIL'],
                 from: email,
                 subject: "New message from #{name}",
                 body: message
