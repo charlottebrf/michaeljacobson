@@ -1,7 +1,19 @@
 require 'sinatra/base'
 require 'thin'
+require 'pony'
 
 class Homepage < Sinatra::Base
+  enable :sessions
+  set :session_secret, ENV.fetch('SESSION_SECRET') { SecureRandom.hex(20) }
+
+  helpers do
+    def send_email(name, email, message)
+      Pony.mail to: 'michael.jacobson89@gmail.com',
+                from: email,
+                subject: "New message from #{name}",
+                body: message
+    end
+  end
 
   get '/' do
     erb :index
@@ -25,6 +37,10 @@ class Homepage < Sinatra::Base
 
   get '/portfolio' do
     erb :portfolio
+  end
+
+  post '/contact/new' do
+    send_email(params[:name], params[:email], params[:message])
   end
 
   run! if $PROGRAM_NAME == __FILE__
