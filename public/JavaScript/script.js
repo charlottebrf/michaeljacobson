@@ -17,12 +17,17 @@ $("document").ready(function() {
         });
     });
 
+    $('#okay').click(function() {
+        $.post('/contact/delete');
+        $('#confirmation_lightbox').css('visibility', 'hidden');
+    });
+
     $(".lightbox-trigger, .lightbox-trigger-top").click(function() {
         var $image_src = $(this).attr("src");
         $(".lightbox-image").attr("src", $image_src);
-        $("#lightbox").css("visibility", "visible");
-        $(".lightbox-image, #lightbox").click(function() {
-            $("#lightbox").css("visibility", "hidden");
+        $(".lightbox").css("visibility", "visible");
+        $(".lightbox-image, .lightbox").click(function() {
+            $(".lightbox").css("visibility", "hidden");
         });
     });
 

@@ -40,20 +40,24 @@
 
 </div>
 
-<!--  <div class="link_menu">
-    <ul>
-        <li><a hrlinks.erbhtml"><img src="Social%20Media%20Logos/linkedin_logo.png" class="icon" /></a></li>
-        <li class="delimiter">|</li>
-        <li><a hrlinks.erbhtml"><img src="Social%20Media%20Logos/github_logo.png" class="icon" /></a></li>
-        <li class="delimiter">|</li>
-        <li><a hrlinks.erbhtml"><img src="Social%20Media%20Logos/instagram_logo.png" class="icon" /></a></li>
-    </ul>
-</div> -->
-
 <div class="footer">
     <p>© 2017 Michael Jacobson | All rights reserved | Website design by Michael Jacobson</p>
 </div>
 
 </body>
+
+<% if @contact %>
+
+<div class="lightbox" id="confirmation_lightbox">
+  <div id="confirmation_message">
+    <div id="confirmation_inner">
+      <p>Hi <%= @contact %>, thanks for your message. <br>I'll be in touch shortly,<br>Mike</p>
+      <br>
+      <button id="okay">Okay</button>
+    </div>
+  </div>
+</div>
+
+<% end %>
 
 </html>

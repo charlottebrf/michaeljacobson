@@ -57,7 +57,12 @@ class Homepage < Sinatra::Base
 
   post '/contact/new' do
     send_email(params[:name], params[:email], params[:message])
+    @contact = params[:name].split(' ')[0]
     redirect '/'
+  end
+
+  post '/contact/delete' do
+    @contact = nil
   end
 
   run! if $PROGRAM_NAME == __FILE__
