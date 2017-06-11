@@ -319,7 +319,7 @@ input, textarea {
 
 .portfolio_title {
     font-size: 30px;
-    font-weight: 300;
+    font-weight: 400;
     padding: 0;
     margin-bottom: 20px;
 }
@@ -385,4 +385,8 @@ input, textarea {
     width: 30px;
     height: 30px;
     cursor: pointer;
+}
+
+.portfolio_link {
+    font-weight: 300;
 }
