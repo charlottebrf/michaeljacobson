@@ -193,13 +193,9 @@ ul {
 }
 
 #me {
-    width: 10%;
-    height: 10%;
-    border-radius: 50%;
-}
-
-#about_me {
-    padding-top: 30px;
+    width: 25%;
+    height: 25%;
+    border-radius: 100%;
 }
 
 span {
