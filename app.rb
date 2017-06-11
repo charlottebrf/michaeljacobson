@@ -29,8 +29,6 @@ class Homepage < Sinatra::Base
                 subject: "New message from #{name}",
                 body: message
     end
-
-    def validate_contact_form(name, email, message); end
   end
 
   before do

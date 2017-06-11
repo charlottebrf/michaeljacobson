@@ -23,11 +23,13 @@ $("document").ready(function() {
     });
 
     $(".lightbox-trigger, .lightbox-trigger-top").click(function() {
-        var $image_src = $(this).attr("src");
-        $(".lightbox-image").attr("src", $image_src);
+        var image_src = $(this).attr("src");
+        $("#gallery_body").css("overflow", "hidden");
+        $(".lightbox-image").attr("src", image_src);
         $(".lightbox").css("visibility", "visible");
         $(".close_lightbox").click(function() {
             $(".lightbox").css("visibility", "hidden");
+            $("#gallery_body").css("overflow", "");
         });
     });
 

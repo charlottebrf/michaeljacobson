@@ -10,6 +10,11 @@ body {
     margin: 0;
 /*  background-color: rgba(248, 248, 255, 1.0);  <- Ghost White, possible alternative BG color for site. */
     background-color: rgba(255, 255, 255, 1.0);
+    overflow: hidden;
+}
+
+#gallery_body {
+    overflow: visible;
 }
 
 div {
