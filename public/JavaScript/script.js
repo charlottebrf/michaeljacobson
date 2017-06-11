@@ -29,7 +29,7 @@ $("document").ready(function() {
         $(".lightbox").css("visibility", "visible");
         $(".close_lightbox").click(function() {
             $(".lightbox").css("visibility", "hidden");
-            $("#gallery_body").css("overflow", "");
+            $("#gallery_body").css("overflow", "visible");
         });
     });
 
