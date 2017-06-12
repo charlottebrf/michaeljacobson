@@ -22,6 +22,11 @@ $("document").ready(function() {
         $('#confirmation_lightbox').css('visibility', 'hidden');
     });
 
+    // $('#take_me_home').click(function() {
+    //     $(this).preventDefault();
+    //     $.get('/');
+    // });
+
     $(".lightbox-trigger, .lightbox-trigger-top").click(function() {
         var image_src = $(this).attr("src");
         $("#gallery_body").css("overflow", "hidden");

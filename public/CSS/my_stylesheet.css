@@ -352,7 +352,7 @@ input, textarea {
     margin: auto;
 }
 
-#okay {
+#okay, #take_me_home {
     color: black;
     font-family: 'source code pro', sans-serif;
     font-size: 20px;
@@ -364,7 +364,7 @@ input, textarea {
     -webkit-appearance: none;
 }
 
-#okay:hover {
+#okay:hover, #take_me_home:hover {
     background-color: black;
     color: ghostwhite;
     border: solid 0.5px black;
@@ -385,4 +385,18 @@ input, textarea {
 
 .portfolio_link {
     font-weight: 300;
+}
+
+#error404 {
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+    margin: auto;
+    padding-top: 30vh;
+    padding-bottom: 30vh;
+}
+
+#error404_form {
+    text-align: center;
+    margin: auto;
 }

@@ -69,5 +69,9 @@ class Homepage < Sinatra::Base
     session[:contact] = nil
   end
 
+  not_found do
+    erb :four_oh_four
+  end
+
   run! if $PROGRAM_NAME == __FILE__
 end
